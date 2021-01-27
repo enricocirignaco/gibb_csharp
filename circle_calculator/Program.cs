@@ -6,6 +6,10 @@ namespace circle_calculator
     {
         static void Main(string[] args)
         {
+            UInt16 radius;
+            UInt16 angle;
+            bool parse_state;
+
             // create new calculator object
             calculator my_calculator = new calculator();
 
@@ -22,9 +26,9 @@ namespace circle_calculator
                 {
                     case "1":
                         Console.Clear();
-                        Console.WriteLine("Kreisumfang\n___________\n");
-                        Console.Write("Radius=");
-                        UInt16 radius = Convert.ToUInt16(Console.Read());
+                        Console.Write("Kreisumfang\n___________\n\nRadius=");
+                        parse_state = UInt16.TryParse(Console.ReadLine(), out radius);
+                        Console.Write("Kreisumfang: ");
                         Console.WriteLine(my_calculator.Circumference(radius));
                         System.Environment.Exit(1);
                         break;
