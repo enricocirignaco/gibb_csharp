@@ -22,7 +22,10 @@ namespace circle_calculator
                 {
                     case "1":
                         Console.Clear();
-                        Console.WriteLine(my_calculator.Circumference(2));
+                        Console.WriteLine("Kreisumfang\n___________\n");
+                        Console.Write("Radius=");
+                        UInt16 radius = Convert.ToUInt16(Console.Read());
+                        Console.WriteLine(my_calculator.Circumference(radius));
                         System.Environment.Exit(1);
                         break;
                     case "2":
