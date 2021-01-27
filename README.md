@@ -6,5 +6,7 @@
 * [.NET Core](https://dotnet.microsoft.com/download)
 
 ## How To?
-1. create new project: `dotnet new console`
-2. run project: `dotnet run`
+1. create new folder: `mkdir project_name`
+2. navigate to folder: `cd project_name`
+3. generate new project: `dotnet new console`
+4. run project: `dotnet run`
