@@ -26,17 +26,39 @@ namespace circle_calculator
                 {
                     case "1":
                         Console.Clear();
-                        Console.Write("Kreisumfang\n___________\n\nRadius=");
+                        Console.Write("Kreisumfang\n___________\n\nRadius= ");
                         parse_state = UInt16.TryParse(Console.ReadLine(), out radius);
                         Console.Write("Kreisumfang: ");
                         Console.WriteLine(my_calculator.Circumference(radius));
                         System.Environment.Exit(1);
                         break;
                     case "2":
+                        Console.Clear();
+                        Console.Write("Kreisfläche\n___________\n\nRadius= ");
+                        parse_state = UInt16.TryParse(Console.ReadLine(), out radius);
+                        Console.Write("Kreisfläche: ");
+                        Console.WriteLine(my_calculator.Circle_area(radius));
+                        System.Environment.Exit(1);
                         break;
                     case "3":
+                        Console.Clear();
+                        Console.Write("Kreisbogen\n___________\n\nRadius= ");
+                        parse_state = UInt16.TryParse(Console.ReadLine(), out radius);
+                        Console.Write("Winkel= ");
+                        parse_state = UInt16.TryParse(Console.ReadLine(), out angle);
+                        Console.Write("Kreisumfang: ");
+                        Console.WriteLine(my_calculator.Circle_arc(radius, angle));
+                        System.Environment.Exit(1);
                         break;
                     case "4":
+                        Console.Clear();
+                        Console.Write("Kreissegment\n___________\n\nRadius= ");
+                        parse_state = UInt16.TryParse(Console.ReadLine(), out radius);
+                        Console.Write("Winkel= ");
+                        parse_state = UInt16.TryParse(Console.ReadLine(), out angle);
+                        Console.Write("Kreissegment: ");
+                        Console.WriteLine(my_calculator.Circle_segment(radius, angle));
+                        System.Environment.Exit(1);
                         break;
                     case "5":
                         Console.WriteLine("Programm Beendet");
