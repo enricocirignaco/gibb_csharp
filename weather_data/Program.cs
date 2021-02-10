@@ -9,19 +9,20 @@ namespace weather_data
 
         static void Main(string[] args)
         {
+            val pressure = new val();
             val temperature = new val();
             val humidity = new val();
             val rain = new val();
 
+            // Open database
             string path = "/Users/enrico/Documents/gibb_csharp/weather_data/Wetterdaten2011.csv";
             var database_file = new StreamReader(path);
-
+            // get database size
             var lineCount = File.ReadAllLines(@"/Users/enrico/Documents/gibb_csharp/weather_data/Wetterdaten2011.csv").Length;
-            Console.WriteLine("Hello World!");
-            Console.WriteLine(x);
-            string[] y = x.Split(';');
-            Console.WriteLine(y[0]);
-            Double val = Double.Parse(y[1]);
+
+            //string[] y = x.Split(';');
+            //Console.WriteLine(y[0]);
+            //Double val = Double.Parse(y[1]);
             Console.WriteLine(lineCount);
 
 
@@ -31,6 +32,7 @@ namespace weather_data
             {
                 string line = database_file.ReadLine();
                 string[] array = line.Split(';');
+                Console.WriteLine(line);
                 pressure.new_val    = Double.Parse(array[0]);
                 temperature.new_val = Double.Parse(array[1]);
                 humidity.new_val    = Double.Parse(array[2]);
@@ -50,7 +52,11 @@ namespace weather_data
         {
             static public void updateAll()
             {
-                update_min()
+                update_min(pressure)
+                {
+                    
+                }
+                
             }
             static private void update_min(object val)
             {
